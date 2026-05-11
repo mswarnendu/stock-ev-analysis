@@ -30,7 +30,7 @@ def main():
     print("Metrics:\n")
     print(f"Start date: {START_DATE.strftime("%Y-%m-%d")}")
     print(f"End date: {END_DATE.strftime("%Y-%m-%d")}")
-    print(f"Volatility: {vol_annual}")
+    print(f"Annual volatility: {vol_annual}")
     print(f"EV: {ev:.6f}")
     print(f"Total return: {total_returns:.6f}")
     print(f"Sharpe Ratio: {sharpe:.6f}")
