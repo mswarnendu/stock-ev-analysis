@@ -23,12 +23,14 @@ def main():
     total_returns = ((prices.iloc[-1] / prices.iloc[0]) - 1).squeeze()
     ev = returns.mean()
     vol = returns.std()
+    vol_annual = vol * math.sqrt(252)
 
     sharpe = ev / vol * math.sqrt(252)
 
     print("Metrics:\n")
     print(f"Start date: {START_DATE.strftime("%Y-%m-%d")}")
     print(f"End date: {END_DATE.strftime("%Y-%m-%d")}")
+    print(f"Volatility: {vol_annual}")
     print(f"EV: {ev:.6f}")
     print(f"Total return: {total_returns:.6f}")
     print(f"Sharpe Ratio: {sharpe:.6f}")
